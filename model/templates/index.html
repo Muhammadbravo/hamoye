@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Price prediction</title>
+<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+<style>
+body {
+  background-image: url('/static/bac1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+ <div class="main">
+	<center><h2>Price prediction (Demo ML deployment)</h2>
+     <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text"  name="vehiclename" placeholder="vehicle name" required="required"/>
+		<br>
+		<br>
+    	<input type="float"  name="battery" placeholder="battery" required="required"/>
+		<br>
+		<br>
+		<input type="float" name="acceleration" placeholder="acceleration" required="required" />
+		<br>
+		<br>
+		<input type="float" name="topspeed" placeholder="topspeed" required="required" />
+		<br>
+		<br>
+		<input type="float" name="distance" placeholder="distance" required="required" />
+		<br>
+		<br>
+		<input type="float" name="efficiency" placeholder="efficiency" required="required" />
+		<br>
+		<br>
+		<input type="float" name="fastcharge" placeholder="fastcharge" required="required" />
+		<br>
+		<br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Price</button>
+    </form>
+   <br>
+</center>
+ </div>	
+</body>
+</html>
